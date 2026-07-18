@@ -1,0 +1,66 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pred-irr-comp"
+version = "0.0.1"
+description = "The dataset for this competition (both train and test) was generated from a deep learning model trained on the Irrigation Prediction dataset. Feature distributions are close to, but not exactly the same, as the original. Feel free to use the original dataset as part of this competition, both to explore differences as well as to see whether incorporating the original in training improves model performance."
+authors = [
+  { name = "Imaad" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.10.0"
+dependencies = [
+    "boto3>=1.42.90",
+    "catboost>=1.2.10",
+    "dotenv>=0.9.9",
+    "lightgbm>=4.6.0",
+    "loguru>=0.7.3",
+    "matplotlib>=3.10.8",
+    "nbformat>=5.10.4",
+    "pandas>=2.3.3",
+    "plotly>=6.7.0",
+    "polars>=1.39.3",
+    "pyarrow>=23.0.1",
+    "rich>=13.0.0",
+    "scikit-learn>=1.7.2",
+    "shap>=0.49.1",
+    "skimpy>=0.0.20",
+    "tqdm>=4.67.3",
+    "typer>=0.24.1",
+    "xgboost>=3.2.0",
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: optional slow integration-style tests",
+]
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.isort]
+profile = "black"
+known_first_party = ["pred_irr_comp"]
+force_sort_within_sections = true
+
+[dependency-groups]
+dev = [
+    "kaggle>=1.7.4.5",
+    "pytest>=7.0.0",
+]
+
+
