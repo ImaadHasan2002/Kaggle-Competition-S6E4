@@ -1,4 +1,4 @@
-# Predicting Irrigation Need — Kaggle Playground Series S6E4
+# Physics-Aware Irrigation Need Prediction (Kaggle S6E4)
 
 **Final rank #978 · Top 20% · solo entry** ([imaadhasan](https://www.kaggle.com/imaadhasan))
 Public leaderboard score: **0.97250** (accuracy)
